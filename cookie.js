@@ -14,6 +14,7 @@ const flowBaseCookie = async(a, b, c, e = 182) => {
     const expiresTime = e * 86400000; // calc milliseconds in days
     date.setTime(date.getTime() + expiresTime); // set the cookie expires time
     document.cookie = "cookieConsent=accepted; expires=" + date.toGMTString() + "; path=/"; // create the cookie
+    $(a).hide(); // remove the cookie block
   })
 
   //clear the cookie
